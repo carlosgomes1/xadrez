@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/a37da25634.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./styles/GlobalStyle.css">
+    <link rel="stylesheet" href="./styles/about.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <img src="../src/assets/global/chess-logo.svg" alt="Logo" id="logo">
+
+                <div class="menu-container">
+                    <span id="span_welcome">Bem-vindo, <b id="user-name-header"></b></span>
+
+                    <div id="hamburger" class="menu-hamburger">
+                        <span class="menu-barra barra-1"></span>
+                        <span class="menu-barra barra-2"></span>
+                        <span class="menu-barra barra-3"></span>
+                    </div>
+
+                    <div class="user">
+                        <i class="fas fa-user svg-user" style="font-size: 24px; color: white;"></i>
+                    </div>
+                </div>
+
+                <div class="menu">
+                </div>
+
+                <div class="user-container">
+                    <ul>
+                        <li>Configurações</li>
+                        <li id="logout">Sair</li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="me">
+            <div class="me-container">
+                <div class="quadrado-teste"></div>
+                <div class="me-content">
+                    <h1 class="name">Carlos Gomes da Silva</h1>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="habilidades">
+            <div class="container-habilidades">
+                <h1 class="title">Habilidades desenvolvidas no xadrez</h1>
+                <div id="hability" class="grid-hab">
+                </div>
+            </div>
+        </section>
+
+        <section class="pecas">
+            <div class="container-pecas">
+                <h1 class="title-pecas">Características das peças encontradas em mim</h1>
+                <div id="pecas-container" class="container-items-pecas">
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
+<script src="./src/js/header.js"></script>
+<script src="./src/js/common.js"></script>
+<script src="./src/js/features.js"></script>

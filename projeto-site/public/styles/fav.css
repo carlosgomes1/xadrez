@@ -1,0 +1,222 @@
+body {
+    background-color: #333;
+    background-image: url('../src/assets/global/fundo-index.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@keyframes appearFromRight {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+main {
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .main-container {
+    width: 75%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .main-container img {
+    height: 100%;
+    max-height: 360px;
+    margin-left: 24px;
+
+    animation: appearFromRight 1s;
+}
+
+.main-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+.main-content p {
+    font: 500 16px Roboto, sans-serif;
+    color: #f3f3f3;
+
+    margin: 8px 0;
+}
+
+/* BOBBY FISCHER */
+
+section.bobby-fischer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background: url(../src/assets/fav/chess-teste4.png) center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.magnus-carlsen .magnus-carlsen-container,
+section.bobby-fischer .bobby-fischer-container,
+section.garry-kasparov .garry-kasparov-container,
+section.mequinho .mequinho-container {
+    width: 75%;
+
+    display: grid;
+    grid-gap: 24px;
+
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+section.bobby-fischer .bobby-fischer-container img,
+section.magnus-carlsen .magnus-carlsen-container img,
+section.garry-kasparov .garry-kasparov-container img,
+section.mequinho .mequinho-container img {
+    width: 100%;
+    display: none;
+}
+
+.bobby-content {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-self: flex-end;
+}
+
+.bobby-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+.bobby-content p,
+.carlsen-content p,
+.kasparov-content p,
+.mequinho-content p {
+    font: 500 19px Roboto, sans-serif;
+    color:#f3f3f3;
+    text-shadow: 1.6px 1.6px #000;
+
+    text-align: justify;
+
+    margin: 8px 0;
+}
+
+/* MAGNUS CARLSEN */
+
+section.magnus-carlsen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background: url(../src/assets/fav/chess-teste2.png) center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.carlsen-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.carlsen-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+/* GARRY KASPAROV */
+
+section.garry-kasparov {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background: url(../src/assets/fav/chess-teste.png) center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.kasparov-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    grid-column: 2;
+}
+
+.kasparov-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+/* MEQUINHO */
+
+section.mequinho {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    background: url(../src/assets/fav/chess-teste3.png) center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.mequinho-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.mequinho-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+@keyframes appearFromLeft {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appearFromRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

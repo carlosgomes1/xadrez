@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    max-height: 13vh;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 6px -6px  rgba(0, 0, 0, 0.6);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 75%;
+}
+
+.header-container img {
+    height: 100%;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 50%;
+}
+
+.svg-user {
+    cursor: pointer;
+}
+
+.menu-container > span {
+    display: none;
+    font: 500 20px Roboto;
+    color: white;
+}
+
+.menu-container span b {
+    font: 700 22px Archivo;
+}
+
+.menu-hamburger {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+}
+
+.menu-barra {
+    background-color: white;
+    height: 5px;
+    width: 30px;
+
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+.barra-2 {
+    margin: 4px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 13vh;
+    left: 0;
+
+    z-index: 5;
+
+    display: none;
+
+    animation: appearFromTop 0.5s;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.menu ul li {
+    font: 500 16px Roboto;
+    color: #f3f3f3;
+    cursor: pointer;
+
+    padding: 5px;
+
+    transition: color 0.3s;
+}
+
+.menu ul li:hover {
+    color: rgb(134, 63, 30);
+}
+
+.rotate1 {
+    transform: rotate(45deg);
+}
+
+.rotate2 {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 4.5px;
+}
+
+.user-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+
+    animation: appearFromTop 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    right: 12.5%;
+    top: 13vh;
+}
+
+.user-container ul li {
+    font: 500 16px Roboto;
+    color: #f3f3f3;
+    cursor: pointer;
+
+    padding: 5px;
+
+    transition: color 0.3s;
+}
+
+.user {
+    display: none;
+}
+
+@keyframes appearFromTop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,292 @@
+body {
+    background-color: #333;
+    background-image: url('../src/assets/global/fundo-index.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@keyframes appear {
+    from {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes piscar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* MAIN */
+
+main {
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-container {
+    width: 75%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .main-container .register-message {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 16px;
+}
+
+.register-message h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+}
+
+.register-message h3 {
+    font: 500 24px Roboto, sans-serif;
+    color: #f3f3f3;
+}
+
+.buttons-container {
+    margin-top: 24px;
+}
+
+.buttons-container button:first-child {
+    padding: 10px;
+    font: 500 16px Roboto;
+
+    border: 1.6px solid rgb(134, 63, 30);
+    border-radius: 8px;
+
+    color: rgb(134, 63, 30);
+    background-color: #f3f3f3;
+
+    margin-right: 8px;
+    transition: color, background-color 0.3s;
+
+    cursor: pointer;
+}
+
+.buttons-container button:first-child:hover {
+    color: #f3f3f3;
+    background-color: rgb(134, 63, 30);
+}
+
+.buttons-container button {
+    padding: 10px;
+    font: 500 16px Roboto;
+
+    border: 1.6px solid rgb(134, 63, 30);
+    border-radius: 8px;
+
+    color: #f3f3f3;
+    background-color: rgb(134, 63, 30);
+
+    transition: color, background-color 0.3s;
+
+    cursor: pointer;
+
+}
+
+.buttons-container button:hover {
+    color: rgb(134, 63, 30);
+    background-color: #f3f3f3;
+}
+
+/* LOGIN */
+
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    min-width: 400px;
+}
+
+form#login, 
+form#cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: appear 1s;
+    
+    width: 100%;
+    max-width: 600px;
+}
+
+form#cadastro {
+    display: none;
+}
+
+form#login fieldset, 
+form#cadastro fieldset {
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form#login fieldset legend, 
+form#cadastro fieldset legend {
+    padding: 0 8px;
+}
+
+form#login fieldset legend img, 
+form#cadastro fieldset legend img {
+    width: 80px;
+}
+
+form#login fieldset h1, 
+form#cadastro fieldset h1 {
+    font: 700 32px Archivo;
+    color: #f3f3f3;
+
+    margin: 8px 0;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    padding: 8px;
+
+    background-color: #f3f3f3;
+
+    border: 1px solid #f3f3f3;
+    border-radius: 8px;
+
+    margin: 6px 0;
+}
+
+.input-container input {
+    flex: 1;
+    border: 0;
+    background-color: #f3f3f3;
+
+    font: 700 16px Roboto, sans-serif;
+}
+
+.svg {
+    color: #333;
+    margin-right: 8px;
+}
+
+.svg2 {
+    color: #333;
+    margin-right: 12px;
+}
+
+form#login fieldset button, 
+form#cadastro fieldset button {
+    width: 90%;
+    padding: 8px;
+
+    margin: 8px 0;
+    
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    color: #f3f3f3;
+    background-color: rgb(134, 63, 30);
+
+    font: 500 16px Roboto, sans-serif;
+    cursor: pointer;
+
+    transition: color, background-color 0.3s;
+}
+
+form#login fieldset button:hover, 
+form#cadastro fieldset button:hover {
+    background-color: #f3f3f3;
+    color: rgb(134, 63, 30);
+}
+
+form#login fieldset span, 
+form#cadastro fieldset span {
+    font: 500 14px Archivo, sans-serif;
+    color: #f3f3f3;
+
+    margin: 0 0 16px;
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+
+form#login fieldset span:hover, 
+form#cadastro fieldset span:hover {
+    color: #999999;
+}
+
+#letter::after {
+    content: '|';
+    margin-left: 3px;
+    animation: piscar 0.5s infinite alternate;
+}
+
+@media (max-width: 1000px) {
+    main .main-container .register-message {
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .register {
+        min-width: 300px;
+    }
+
+    main .main-container {
+        width: 90%;
+    }
+}
+
+@keyframes testezinho {
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    } 
+
+    25% {
+        transform: matrix(-0.8, 0.7, 1, 1, 0.9, 1.2);
+
+    }
+
+    50% {
+        transform: matrix(1, 0.9, -0.7, 1, 1, 0.9);
+
+    }
+
+    75% {
+        visibility: hidden;
+    opacity: 0;
+    transform: matrix(0.9, 0, 0, 0.9, 0, 0);
+
+
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 1;
+    }
+}

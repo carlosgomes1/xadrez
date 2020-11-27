@@ -1,0 +1,116 @@
+body {
+    background-image: url('../src/assets/global/fundo-index.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main {
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 75%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chess-svg {
+    width: 100%;
+    max-width: 400px;
+}
+
+section.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+section.main-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+section.main-content p {
+    font: 500 16px Roboto, sans-serif;
+    color: #f3f3f3;
+
+    margin: 8px 0;
+}
+
+.board-svg {
+    width: 100%;
+    max-width: 360px;
+
+    margin-right: 24px;
+}
+
+/* SLIDER */
+
+.main-pecas {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PEÇAS */
+
+section.pecas-content {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 60%;
+}
+
+section.pecas-content h1 {
+    font: 700 48px Archivo, sans-serif;
+    color: #f3f3f3;
+    text-shadow: 2px 2px #000;
+
+    margin-bottom: 16px;
+}
+
+section.pecas-content p {
+    font: 500 16px Roboto, sans-serif;
+    color: #f3f3f3;
+
+    margin: 8px 0;
+}
+
+.peca-svg {
+    width: 200px;
+}
+
+.pecas-container {
+    width: 75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    border-top: 1px solid  gray;
+    padding-top: 32px;
+
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator h1 {
+    font: 700 64px Archivo, sans-serif;
+    color: #f3f3f3;
+}

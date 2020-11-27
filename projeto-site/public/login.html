@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/GlobalStyle.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/loading.css">
+    <link rel="stylesheet" href="./styles/toast.css">
+
+    <script src="https://kit.fontawesome.com/a37da25634.js" crossorigin="anonymous"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="toast-container">
+        <i id="toast-icon" class="fas"></i>
+        <div>
+            <strong id="toast-title"></strong>
+            <p id="toast-desc"></p>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <img src="./src/assets/global/chess-logo.svg" alt="Logo" id="logo">
+
+                <div id="hamburger" class="menu-hamburger">
+                    <span class="menu-barra barra-1"></span>
+                    <span class="menu-barra barra-2"></span>
+                    <span class="menu-barra barra-3"></span>
+                </div>
+
+                <div class="menu">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="register-message">
+                    <h1>Faça login ou cadastre-se.</h1>
+                    <h3 id="letter">Se cadastrando, você receberá notícias frequentes sobre meus artigos e novidades no
+                        mundo do xadrez, assim como aulas e dicas sobre aberturas, finais, sacrifícios e muito mais.
+                    </h3>
+                    <div class="buttons-container">
+                        <button>Ver artigos</button>
+                        <button>Sobre o autor</button>
+                    </div>
+                </div>
+
+                <div class="register">
+                    <form id="login" method="POST" onsubmit="return handleLogin()">
+                        <fieldset>
+                            <legend><img src="./src/assets/login/king.svg"></legend>
+                            <h1>Login</h1>
+                            <div class="input-container">
+                                <i class="fa fa-envelope svg" style="font-size: 18px"></i>
+                                <input type="email" name="email" placeholder="Seu e-mail..." required>
+                            </div>
+                            <div class="input-container">
+                                <i class="fa fa-lock svg2" style="font-size: 22px"></i>
+                                <input type="password" name="senha" placeholder="Sua senha..." required>
+                            </div>
+                            <button type="submit">Entrar</button>
+                            <span id="create">Não possuo conta</span>
+                        </fieldset>
+                    </form>
+
+                    <form id="cadastro" method="POST" onsubmit="return handleRegister()">
+                        <fieldset>
+                            <legend><img src="./src/assets/login/horse.svg"></legend>
+                            <h1>Cadastro</h1>
+                            <div class="input-container">
+                                <i class="fa fa-user svg" style="font-size: 18px"></i>
+                                <input type="text" name="nome" placeholder="Seu nome..." required>
+                            </div>
+                            <div class="input-container">
+                                <i class="fa fa-envelope svg" style="font-size: 18px"></i>
+                                <input type="email" name="email" placeholder="Seu e-mail..." required>
+                            </div>
+                            <div class="input-container">
+                                <i class="fa fa-lock svg2" style="font-size: 22px"></i>
+                                <input type="password" name="senha" placeholder="Sua senha..." required>
+                            </div>
+                            <button type="submit">Cadastrar</button>
+                            <span id="own">Já possuo conta</span>
+                        </fieldset>
+                    </form>
+
+                    <div class="lds-dual-ring"></div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
+<script src="./src/js/notAuthenticated.js"></script>
+<script src="./src/js/register.js"></script>
+<script src="./src/js/letter.js"></script>
+<script src="./src/js/header.js"></script>
+<script src="./src/js/common.js"></script>
