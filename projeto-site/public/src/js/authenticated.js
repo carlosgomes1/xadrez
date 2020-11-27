@@ -9,4 +9,3 @@ const verifyAuth = () => {
 }
 
 verifyAuth();
-setName();
