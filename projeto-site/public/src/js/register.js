@@ -92,36 +92,36 @@ const handleRegister = () => {
 
 const handleLogin = () => {
     loading(formLogin);
-        var formularioLogin = new URLSearchParams(new FormData(formLogin));
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            body: formularioLogin
-        }).then(resposta => {
+    var formularioLogin = new URLSearchParams(new FormData(formLogin));
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        body: formularioLogin
+    }).then(resposta => {
 
-            if (resposta.ok) {
+        if (resposta.ok) {
 
-                resposta.json().then(json => {
+            resposta.json().then(json => {
 
-                    sessionStorage.email_usuario = json.email;
-                    sessionStorage.nome_usuario = json.nome;
+                sessionStorage.email_usuario = json.email;
+                sessionStorage.nome_usuario = json.nome;
 
-                    window.location.href = 'about.html';
-                });
+                window.location.href = 'about.html';
+            });
 
-            } else {
+        } else {
 
-                console.log('Erro de login!');
-                showToast('error', 'Erro', 'Ocorreu um erro durante o envio de informações.')
+            console.log('Erro de login!');
+            showToast('error', 'Erro', 'Ocorreu um erro durante o envio de informações.')
 
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
 
-                afterLoading(formLogin);
-            }
-        });
+            afterLoading(formLogin);
+        }
+    });
 
-        return false;
+    return false;
 }
 
 const loadingRing = document.querySelector('.lds-dual-ring');
