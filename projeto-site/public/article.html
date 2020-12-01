@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./styles/GlobalStyle.css">
+    <link rel="stylesheet" href="./styles/article.css">
 
     <script src="https://kit.fontawesome.com/a37da25634.js" crossorigin="anonymous"></script>
 
@@ -45,9 +46,72 @@
             </div>
         </header>
 
-        <div>
-            <h1>Aqui terá os artigos</h1>
-        </div>
+        <section class="main">
+            <div class="main-container">
+                <aside class="left">
+                    <div class="filter">
+                        <button class="active"><i class="far fa-newspaper svg"
+                                style="font-size: 20px;"></i><span>Artigos</span></button>
+                        <button><i class="fas fa-video svg" style="font-size: 20px;"></i><span>Vídeos</span></button>
+                        <button><i class="fas fa-microphone svg"
+                                style="font-size: 20px;"></i><span>Podcasts</span></button>
+                    </div>
+                    <div class="tags">
+                        <b>Tags populares</b>
+                        <button>#historia</button>
+                        <button>#magnus-carlsen</button>
+                        <button>#taticas</button>
+                        <button>#fischer</button>
+                        <button>#sacrificio</button>
+                        <button>#aberturas</button>
+                    </div>
+                </aside>
+                <main>
+                    <b class="title">Posts</b>
+                    <div class="posts-container">
+                        <div class="post">
+                            <img src="src/assets/fav/carlsen.png">
+                            <div>
+                                <div class="post-header">
+                                    <b>carlosgomes1</b>
+                                    <span>Nov 30</span>
+                                </div>
+
+                                <div class="post-body">
+                                    <a href="#"><b>O Gambito da Rainha</b></a>
+                                    <p>#historia #serie #netflix</p>
+                                </div>
+
+                                <div class="post-footer">
+                                    <i class="far fa-heart"></i><span>59 reações</span>
+                                    <i class="far fa-comment"></i><span>6 comentários</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <img src="src/assets/fav/carlsen.png">
+                            <div>
+                                <div class="post-header">
+                                    <b>carlosgomes1</b>
+                                    <span>Nov 24</span>
+                                </div>
+
+                                <div class="post-body">
+                                    <a href="#"><b>A história de Bobby Fischer</b></a>
+                                    <p>#historia #fischer #mundial #campeao #guerrafria</p>
+                                </div>
+
+                                <div class="post-footer">
+                                    <i class="far fa-heart"></i><span>189 reações</span>
+                                    <i class="far fa-comment"></i><span>77 comentários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
     </div>
 </body>
 
