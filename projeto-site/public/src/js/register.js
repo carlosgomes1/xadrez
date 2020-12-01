@@ -105,7 +105,7 @@ const handleLogin = () => {
                 sessionStorage.email_usuario = json.email;
                 sessionStorage.nome_usuario = json.nome;
 
-                window.location.href = 'about.html';
+                window.location.href = 'article.html';
             });
 
         } else {

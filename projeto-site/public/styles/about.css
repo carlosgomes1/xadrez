@@ -22,10 +22,21 @@ section.me .me-container {
     justify-content: space-between;
 }
 
-.quadrado-teste {
-    width: 500px;
-    height: 400px;
-    background-color: white;
+.me-container img {
+    height: 90%;
+    animation: appearFromLeft 1s;
+}
+
+@keyframes appearFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 section.me .me-container .me-content {
